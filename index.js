@@ -23,7 +23,7 @@ class mlAuth {
 	async login(email){
 		if(!email) throw("Email is missing")
 		try {
-			return this.client(`/ml/login`, {
+			return this.client.raw(`/ml/login`, {
 				body: { email }
 			})
 		} catch (error) {
@@ -37,7 +37,7 @@ class mlAuth {
 	async verify(token){
 		if(!token) throw("Token is missing")
 		try {
-			return this.client(`/ml/verify`, {
+			return this.client.raw(`/ml/verify`, {
 				body: { token }
 			})
 		} catch (error) {
