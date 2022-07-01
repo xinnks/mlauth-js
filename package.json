@@ -4,11 +4,23 @@
   "description": "A javascript client for the mlAuth authentication service",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "keywords": [
+    "mlAuth", "authentication", "magic links"
+  ],
+  "author": "James Sinkala <xinnks@gmail.com>",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/github.com:xinnks/mlauth-npm/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/xinnks/mlauth-npm.git"
+  },
   "dependencies": {
     "ohmyfetch": "^0.4.18"
   }
