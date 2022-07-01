@@ -1,6 +1,6 @@
 {
   "name": "mlauth-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A javascript client for the mlAuth authentication service",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
   },
   "license": "MIT",
   "keywords": [
-    "mlAuth", "authentication", "magic links"
+    "mlAuth",
+    "authentication",
+    "magic links"
   ],
   "author": "James Sinkala <xinnks@gmail.com>",
   "licenses": [
