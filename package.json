@@ -14,12 +14,12 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/github.com:xinnks/mlauth-npm/LICENSE"
+      "url": "http://github.com/github.com:xinnks/mlauth-js/LICENSE"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/xinnks/mlauth-npm.git"
+    "url": "http://github.com/xinnks/mlauth-js.git"
   },
   "dependencies": {
     "ohmyfetch": "^0.4.18"
