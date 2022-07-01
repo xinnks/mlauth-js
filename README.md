@@ -5,7 +5,7 @@ The javascript client for the mlAuth authentication service
 ### install
 
 ```sh
-$ npm i mlauth
+$ npm i mlauth-js
 ```
 
 
