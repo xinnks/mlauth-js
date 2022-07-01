@@ -1,5 +1,5 @@
 {
-  "name": "mlauth",
+  "name": "mlauth-js",
   "version": "0.1.0",
   "description": "A javascript client for the mlAuth authentication service",
   "main": "index.js",

@@ -1,4 +1,4 @@
-# mlauth
+# mlauth-js
 
 The javascript client for the mlAuth authentication service
 
