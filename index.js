@@ -6,7 +6,7 @@ class mlAuth {
 	constructor({key, secret}){
 		if(!key || !secret) throw("You need to add app keys")
 		this.endpoint = "https://ml-auth.ml"
-		const customFetch = $fetch.create({
+		this.client = $fetch.create({
 			baseURL: this.endpoint,
 			method: 'POST',
 			headers: {
@@ -14,7 +14,6 @@ class mlAuth {
   			"Authorization": `Basic `+ btoa(`${key}:${secret}`)
 		  }
 		})
-		this.client = customFetch
 	}
 
 	/**
