@@ -1,5 +1,5 @@
 
-const { $fetch } = require("ohmyfetch")
+import { $fetch } from "ohmyfetch"
 
 class mlAuth {
 
@@ -11,7 +11,7 @@ class mlAuth {
 			method: 'POST',
 			headers: {
 		    Accept: 'application/json',
-  			"Authorization": `Basic `+ btoa(`${key}:${secret}`)
+  			"Authorization": `Basic ${btoa(`${key}:${secret}`)}`
 		  }
 		})
 	}
@@ -45,4 +45,4 @@ class mlAuth {
 	}
 }
 
-module.exports = mlAuth
+export default mlAuth
