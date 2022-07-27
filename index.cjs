@@ -5,7 +5,7 @@ class mlAuth {
 
 	constructor({key, secret}){
 		if(!key || !secret) throw("You need to add app keys")
-		this.endpoint = "https://ml-auth.ml"
+		this.endpoint = "https://mlauth.ml"
 		const keys = Buffer.from(`${key}:${secret}`, "utf8")
 		this.client = $fetch.create({
 			baseURL: this.endpoint,
