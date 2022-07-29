@@ -1,34 +1,55 @@
 # mlauth-js
 
-The javascript client for the mlAuth authentication service
+The javascript client for [mlAuth](https://github.com/xinnks/mlAuth).
+
+## Quick Start
 
 ### install
 
 ```sh
-$ npm i mlauth-js
+# npm
+npm i mlauth-js
+
+# pnpm
+pnpm add mlauth-js
+
+# yarn
+yarn add mlauth-js
 ```
 
 
-### Initiate an instance of mlAuth
+### import
 
-```sh
+```js
+// ESM / Typescript
+import mlAuth from 'mlauth-js'
+
+// CommonJS
 const mlAuth = require('mlauth-js')
+```
 
+## Start Authenticating Users
+
+### Innitiate a new instance of mlAuth
+
+```js
 const client = new mlAuth({
 	client: APP_KEY,
 	secret: APP_SECRET
 })
 ```
 
-## Make Login Requests
+### Make Login Requests (send magic login links to users)
+
 ```sh
 const response = await mlAuth().login(EMAIL)
 ```
 
-
 ## Authenticate tokens from magic links
+Obtain the **token** query from your app's __*callbackUrl*__, and pass it in the verify method.
+
 ```sh
-const response = await mlAuth().verify(TOKEN)
+const response = await mlAuth().verify(token)
 ```
 
 Both endpoints above resolve with standard HTTP responses.
