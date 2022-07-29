@@ -1,6 +1,6 @@
 {
   "name": "mlauth-js",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A javascript client for the mlAuth authentication service",
   "type": "module",
   "exports": {
