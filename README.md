@@ -52,5 +52,8 @@ Obtain the **token** query from your app's __*callbackUrl*__, and pass it in the
 const response = await mlAuth().verify(token)
 ```
 
-Both endpoints above resolve with standard HTTP responses.
-Additional information is provided inside a `message` property inside the data Object for all responses that resolve with 200 status codes.
+Both async methods resolve with standard HTTP responses.
+
+On success, we receive a response Object with a __data__ and __message__ properties.
+
+On failure, errors containing failure status codes and messages explaining the problem will be thrown.
