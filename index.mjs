@@ -3,15 +3,17 @@ import { $fetch } from "ohmyfetch"
 
 class mlAuth {
 
-	constructor({key, secret}){
-		if(!key || !secret) throw new Error("You need to add app keys")
+	constructor({client, secret}){
+		const missingKeys = ["client", "secret"].filter((key) => !Object.keys(arguments[0]).includes(key))
+		if(!client || !secret) throw new Error(`You need to add app keys. Missing [${missingKeys}]`)
+
 		this.endpoint = "https://api.mlauth.ml"
 		this.client = $fetch.create({
 			baseURL: this.endpoint,
 			method: 'POST',
 			headers: {
 		    Accept: 'application/json',
-  			"Authorization": `Basic ${btoa(`${key}:${secret}`)}`
+  			"Authorization": `Basic ${btoa(`${client}:${secret}`)}`
 		  }
 		})
 	}

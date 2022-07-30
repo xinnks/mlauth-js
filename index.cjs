@@ -2,9 +2,11 @@ const { $fetch } = require("ohmyfetch")
 
 class mlAuth {
 
-	constructor({key, secret}){
-		if(!key || !secret) throw new Error("You need to add app keys")
-		const keys = Buffer.from(`${key}:${secret}`, "utf8")
+	constructor({client, secret}){
+		const missingKeys = ["client", "secret"].filter((key) => !Object.keys(arguments[0]).includes(key))
+		if(!client || !secret) throw new Error(`You need to add app keys. Missing [${missingKeys}]`)
+
+		const keys = Buffer.from(`${client}:${secret}`, "utf8")
 		this.config = {
 			baseURL: "https://api.mlauth.ml",
 			method: 'POST',
