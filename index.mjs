@@ -17,7 +17,8 @@ class mlAuth {
 	}
 
 	/**
-	 * makes a login request for app client
+	 * @description Makes a login request for app client
+	 * @param {String} email
 	 */
 	async login(email){
 		if(!email) throw new Error("Email is missing")
@@ -31,7 +32,8 @@ class mlAuth {
 	}
 
 	/**
-	 * Verifies a login request token from the magic link
+	 * @description Verifies a login request token from the magic link
+	 * @param {String} token
 	 */
 	async verify(token){
 		if(!token) throw new Error("Token is missing")
