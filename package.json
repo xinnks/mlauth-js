@@ -10,7 +10,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\""
   },
-  "license": "MIT",
   "keywords": [
     "mlAuth",
     "authentication",
@@ -20,15 +19,10 @@
     "planetscale hackathon"
   ],
   "author": "James Sinkala <xinnks@gmail.com> (https://jamesinkala.com)",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/github.com:xinnks/mlauth-js/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "http://github.com/xinnks/mlauth-js.git"
+    "url": "https://github.com/xinnks/mlauth-js.git"
   },
   "dependencies": {
     "ohmyfetch": "^0.4.18"
