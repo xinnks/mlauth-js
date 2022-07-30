@@ -5,7 +5,7 @@
   "type": "module",
   "exports": {
     "import": "index.mjs",
-    "require": "index.cjs"
+    "require": "./index.cjs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\""
