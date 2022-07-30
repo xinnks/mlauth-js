@@ -1,20 +1,19 @@
-
 const { $fetch } = require("ohmyfetch")
 
 class mlAuth {
 
 	constructor({key, secret}){
 		if(!key || !secret) throw new Error("You need to add app keys")
-		this.endpoint = "https://api.mlauth.ml"
 		const keys = Buffer.from(`${key}:${secret}`, "utf8")
-		this.client = $fetch.create({
-			baseURL: this.endpoint,
+		this.config = {
+			baseURL: "https://api.mlauth.ml",
 			method: 'POST',
 			headers: {
-		    Accept: 'application/json',
-  			"Authorization": `Basic ${keys.toString("base64")}`
-		  }
-		})
+				Accept: 'application/json',
+				"Authorization": `Basic ${keys.toString("base64")}`,
+			},
+		}
+		this.client = $fetch
 	}
 
 	/**
@@ -24,6 +23,7 @@ class mlAuth {
 		if(!email) throw new Error("Email is missing")
 		try {
 			return this.client(`/ml/login`, {
+				...this.config,
 				body: { email }
 			})
 		} catch (error) {
@@ -38,6 +38,7 @@ class mlAuth {
 		if(!token) throw new Error("Token is missing")
 		try {
 			return this.client(`/ml/verify`, {
+				...this.config,
 				body: { token }
 			})
 		} catch (error) {
