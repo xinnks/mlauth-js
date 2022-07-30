@@ -4,7 +4,7 @@
   "description": "A javascript client for the mlAuth authentication service",
   "type": "module",
   "exports": {
-    "import": "index.mjs",
+    "import": "./index.mjs",
     "require": "./index.cjs"
   },
   "scripts": {
@@ -14,9 +14,12 @@
   "keywords": [
     "mlAuth",
     "authentication",
-    "magic links"
+    "magic links",
+    "planetscape",
+    "hashnode",
+    "planetscale hackathon"
   ],
-  "author": "James Sinkala <xinnks@gmail.com>",
+  "author": "James Sinkala <xinnks@gmail.com> (https://jamesinkala.com)",
   "licenses": [
     {
       "type": "MIT",
