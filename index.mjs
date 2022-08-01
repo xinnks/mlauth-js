@@ -1,7 +1,8 @@
 import { $fetch } from "ohmyfetch"
 
 class mlAuth {
-  constructor({ client, secret }) {
+  constructor({ client, secret }, throwErrors = false) {
+    this.throwErrors = throwErrors
     const missingKeys = ["client", "secret"].filter(
       (key) => !Object.keys(arguments[0]).includes(key)
     )
@@ -25,13 +26,15 @@ class mlAuth {
    */
   async login(email) {
     if (!email) throw new Error("Email is missing")
-    if(!/^\b[\w.-]+@[\w.-]+\.\w{2,4}\b$/gi.test(email)) throw new Error("Use a valid email")
+    if (!/^\b[\w.-]+@[\w.-]+\.\w{2,4}\b$/gi.test(email))
+      throw new Error("Use a valid email")
     try {
       return this.client(`/ml/login`, {
         body: { email },
       })
     } catch (error) {
-      throw new Error(error)
+      if (this.throwErrors) throw new Error(error)
+      return error
     }
   }
 
@@ -46,7 +49,8 @@ class mlAuth {
         body: { token },
       })
     } catch (error) {
-      throw new Error(error)
+      if (this.throwErrors) throw new Error(error)
+      return error
     }
   }
 }
