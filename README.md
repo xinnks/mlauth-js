@@ -74,6 +74,6 @@ Both instance return Promises that resolve as follows:
 
 ## Examples
 
-Here are examples using this package to authenticate users with [mlAuth](https://github.com/xinnks/mlAuth).
-- [mlauth-fe-demo (Vite + Vue.js)](mlauth front-end demo)
-- [mlauth-be-demo (NodeJs + Express)](mlauth back-end demo)
+Here are examples demonstrating how to use this package when authenticating users with [mlAuth](https://github.com/xinnks/mlAuth).
+- [mlauth-fe-demo](https://github.com/xinnks/mlauth-fe-demo) - Vite + Vue.js
+- [mlauth-be-demo](https://github.com/xinnks/mlauth-be-demo) - NodeJs + Express
