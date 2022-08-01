@@ -1,6 +1,12 @@
 const { $fetch } = require("ohmyfetch")
 
 class mlAuth {
+  /**
+   * @param {Object} keys - App keys
+   * @param {Object} keys.client
+   * @param {Object} keys.secret
+   * @param {Boolean} throwErrors
+   */
   constructor({ client, secret }, throwErrors = false) {
     this.throwErrors = throwErrors
     const missingKeys = ["client", "secret"].filter(
