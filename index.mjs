@@ -25,6 +25,7 @@ class mlAuth {
    */
   async login(email) {
     if (!email) throw new Error("Email is missing")
+    if(!/^\b[\w.-]+@[\w.-]+\.\w{2,4}\b$/gi.test(email)) throw new Error("Use a valid email")
     try {
       return this.client(`/ml/login`, {
         body: { email },
