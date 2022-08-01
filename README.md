@@ -54,11 +54,22 @@ Obtain the **token** passed as a query on the __*callbackUrl*__ you added while 
 const response = await client.verify(TOKEN)
 ```
 
-Both async methods resolve with standard HTTP responses.
-
-On success, we receive a response Object with a __data__ and __message__ properties.
-
-On failure, errors containing failure status codes and messages explaining the problem will be thrown.
+Both instance return Promises that resolve as follows:
+- Successful requests, return an Object with a __data__ and __message__ properties.
+  ```js
+    // Example:
+    {
+      data: {
+        // magic link details
+      },
+      message: "Magic link created"
+    }
+  ```
+- Failures, resolve with [ohmyfetch]()'s `FetchError` type. The error body is available on `error.data`.
+  ```js
+    // Example:
+    FetchError: 401 Not Authorized
+  ```
 
 
 ## Examples
